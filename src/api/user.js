@@ -1,24 +1,23 @@
-import request from '@/utils/request'
+import request from '@/utils/webfluxRequest'
 
 export function login(data) {
   return request({
-    url: '/vue-element-admin/user/login',
-    method: 'post',
+    url: '/signIn',
+    method: 'POST',
     data
   })
 }
 
-export function getInfo(token) {
+export function getInfo() {
   return request({
-    url: '/vue-element-admin/user/info',
-    method: 'get',
-    params: { token }
+    url: '/user/getCurrentUser',
+    method: 'get'
   })
 }
 
 export function logout() {
   return request({
-    url: '/vue-element-admin/user/logout',
+    url: '/signOut',
     method: 'post'
   })
 }

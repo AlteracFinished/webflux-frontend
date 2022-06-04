@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Vue Element Admin',
+  title: 'Webflux frontend',
 
   /**
    * @type {boolean} true | false

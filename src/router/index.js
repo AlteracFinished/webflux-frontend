@@ -197,7 +197,7 @@ export const asyncRoutes = [
     name: 'Example',
     meta: {
       title: 'Example',
-      icon: 'el-icon-s-help'
+      icon: 'el-icon-user-solid'
     },
     children: [
       {
@@ -379,6 +379,25 @@ export const asyncRoutes = [
       {
         path: 'https://github.com/PanJiaChen/vue-element-admin',
         meta: { title: 'External Link', icon: 'link' }
+      }
+    ]
+  },
+
+  {
+    path: '/users',
+    component: Layout,
+    redirect: '/users/list',
+    name: 'Users',
+    meta: {
+      title: 'Users',
+      icon: 'el-icon-user-solid'
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/users/pagination'),
+        name: 'UserList',
+        meta: { title: 'User List', icon: 'list' }
       }
     ]
   },
